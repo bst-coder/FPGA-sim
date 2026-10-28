@@ -1,0 +1,25 @@
+set_global_assignment -name TOP_LEVEL_ENTITY vga_top
+
+# -- SWITCHES --
+set_location_assignment SW0 -to SW(0) # Mode[0]
+set_location_assignment SW1 -to SW(1) # Mode[1]
+
+set_location_assignment SW2 -to SW(2) # Color Blue
+set_location_assignment SW3 -to SW(3) # Color Green
+set_location_assignment SW4 -to SW(4) # Color Red
+
+set_location_assignment SW5 -to SW(5) # Scroll En
+
+set_location_assignment SW8 -to SW(8) # Speed[0]
+set_location_assignment SW9 -to SW(9) # Speed[1]
+
+# -- BOUTONS --
+set_location_assignment KEY0 -to KEY(0) # Reset (Actif bas)
+set_location_assignment KEY1 -to KEY(1) # Freeze (Actif bas)
+
+# -- LEDS --
+# L'entité vga_top ne renvoie pas de score, donc on peut 
+# mapper les LED sur les interrupteurs pour visualiser leur état
+set_location_assignment LED0 -to LEDR(0) # SW0
+set_location_assignment LED1 -to LEDR(1) # SW1
+set_location_assignment LED2 -to LEDR(2) # SW2
